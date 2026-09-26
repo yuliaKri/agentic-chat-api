@@ -1,0 +1,20 @@
+# Dependencies and generated files
+node_modules/
+.wrangler/
+dist/
+coverage/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Logs and local editor files
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

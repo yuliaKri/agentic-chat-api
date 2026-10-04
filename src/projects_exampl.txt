@@ -1,0 +1,54 @@
+## Recent Project 1 — Alberta Energy Regulator (AER)
+**Role:** Full Stack Developer
+**Sector:** Public sector / energy regulatory
+
+Worked on AER's regulatory digital platform supporting industry submissions and internal regulatory review. The platform used a distributed architecture of approximately 60 microservices and microfrontends.
+
+Delivered full-stack functionality across frontend UI, APIs, data, workflow rules, integrations, automated testing, deployment and production support.
+
+A major area of work involved Water Act / water-licensing and Mine Liability Estimation (MLE) regulatory workflows.
+
+The application supported the complete regulatory review process. After an industry applicant submitted an application, reviewers validated required information and supporting documents. Applications progressed through defined review stages, including assignment to a Lead and later a Decision Maker. Status transitions and validation rules controlled whether an application was allowed to move to the next stage.
+
+When information was missing or insufficient, the Lead could send additional questions back to the industry applicant. Yulia implemented a new authenticated applicant-response flow so the applicant could follow a link, sign in, open the relevant application, view the regulator's questions and submit responses.
+
+The regulatory side could then see answered and outstanding questions, review the responses and update the application's status as it progressed through the review process.
+
+After approval, the system generated a PDF decision/approval document containing the relevant application and decision information and delivered it to the industry user who submitted the application.
+
+Yulia participated in technical discovery, solution design, implementation, code review, automated testing, release validation, deployment support and production troubleshooting.
+
+Azure DevOps pipelines and build checks were used to validate changes before deployment. Azure Application Insights was used after deployment to monitor application behaviour, investigate errors and validate releases.
+
+The broader cross-functional program included developers, QA, product/business analysts, regulatory subject-matter experts, data specialists and platform/DevOps teams, with approximately 50 people across the broader delivery organization.
+
+**Technologies:** React, Angular, TypeScript, JavaScript, microfrontends, Node.js, Express, GraphQL, REST APIs, PostgreSQL, Redis, Kafka, approximately 60 microservices, authentication/authorization, workflow/state management, document handling, PDF generation, Azure, Azure DevOps, Application Insights, Docker, Kubernetes, Git, CI/CD, automated testing, CodeRabbit, Claude and OpenAI/Codex.
+
+
+## Recent Project 2 — LodgeLink
+**Role:** Full Stack Developer / Project Lead
+**Sector:** Private-sector SaaS / travel, accommodation and workforce-management technology
+
+Built and modernized customer-facing and operational applications supporting accommodation booking, payments, finance, supplier/partner workflows and workforce travel.
+
+Worked end-to-end across React/TypeScript frontend applications, Node.js backend services, GraphQL and REST APIs, databases, integrations, distributed services, testing, deployment and production support.
+
+One major project involved implementing French localization across the LodgeLink platform. The solution supported the mobile application and three web applications.
+
+Yulia participated in the localization architecture from technical design and approval through implementation and production support. Localize.js was used as part of the localization solution, while mobile translation data was database-backed.
+
+The solution also included bilingual email templates and secure JWT-based booking links containing protected booking information. These links allowed users to open the relevant booking and view localized content without requiring the standard login flow.
+
+During the localization project, Yulia identified an important production performance issue through Application Insights. Unexpected Cosmos DB dependency activity was occurring even for requests that did not require translation.
+
+She traced the problem to eager dependency initialization: a parent service instantiated the localization service, which initialized the Cosmos translation infrastructure even when localization was not required for the request.
+
+She refactored the dependency flow so that the localization/Cosmos functionality was initialized only when translation functionality was actually needed.
+
+This reduced unnecessary Cosmos activity, improved API performance, simplified the dependency structure and made the localization implementation more maintainable.
+
+Other LodgeLink work included Stripe payment integration, typed event/queue-based workflows, Mandrill notification flows, Sentry monitoring, mapping functionality using Google Maps/Mapbox, data migrations, platform modernization and work on the Purchases area.
+
+The broader product and engineering organization included developers, QA, product, design, data and platform/DevOps, with approximately 30 people.
+
+**Technologies:** React, Next.js, TypeScript, JavaScript, MUI, Node.js, GraphQL, REST, gRPC, PostgreSQL, MySQL, Cosmos DB, Localize.js, JWT, Stripe, Mandrill, typed events/event-driven queues, Sentry, Google Maps, Mapbox, Docker, Azure DevOps, GitHub Actions, CI/CD, automated testing and production support.

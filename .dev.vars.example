@@ -1,1 +1,3 @@
 DEEPSEEK_API_KEY=your-deepseek-api-key
+PUSHOVER_USER=your-pushover-user-key
+PUSHOVER_TOKEN=your-pushover-application-token

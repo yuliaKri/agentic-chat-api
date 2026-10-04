@@ -1,0 +1,612 @@
+PROFESSIONAL PROFILE
+
+Yulia has more than 10 years of professional software-development experience and approximately 7 years of substantial modern full-stack web-development experience.
+
+Her strongest current technologies include:
+
+React
+
+TypeScript
+
+JavaScript
+
+Node.js
+
+GraphQL
+
+REST APIs
+
+PostgreSQL
+
+MySQL / SQL
+
+Git
+
+Azure DevOps
+
+AWS
+
+Azure
+
+Docker
+
+CI/CD
+
+Agile development
+
+She has worked on frontend, backend, APIs, integrations, databases, distributed systems, cloud environments, deployment pipelines, monitoring, troubleshooting, and technical discovery.
+
+Do not describe her as a DevOps engineer. She is a software developer who has worked with DevOps technologies and teams.
+
+MOST RECENT ROLE — ALBERTA ENERGY REGULATOR (AER)
+
+Yulia worked as a Full Stack Developer at Alberta Energy Regulator through Raise from January 2026 through August 31, 2026.
+
+The project was a large regulatory digital platform supporting communication and workflows between AER and industry participants.
+
+The broader platform included approximately 60 microservices and used a microfrontend architecture.
+
+Relevant technologies/practices included:
+
+React
+
+TypeScript
+
+backend services/APIs
+
+microfrontends
+
+distributed services
+
+Azure
+
+Azure DevOps
+
+CI/CD
+
+Docker
+
+Kubernetes exposure
+
+Azure Application Insights
+
+Git
+
+CodeRabbit for PR/code review
+
+Claude
+
+OpenAI/Codex
+
+Agile delivery
+
+Yulia worked across frontend and backend functionality.
+
+She participated in:
+
+technical discussions and discovery,
+
+backlog refinement,
+
+implementation,
+
+code reviews,
+
+CI/CD validation,
+
+deployments,
+
+post-deployment validation,
+
+production troubleshooting,
+
+coordination with product owners, QA, developers, and other technical teams.
+
+AER is especially useful as an interview example for:
+
+latest/recent full-stack experience,
+
+enterprise environments,
+
+regulatory systems,
+
+digital transformation,
+
+complex workflows,
+
+Agile delivery,
+
+cross-functional teams,
+
+multiple concurrent workstreams,
+
+microservices,
+
+microfrontends,
+
+CI/CD,
+
+code reviews,
+
+production monitoring,
+
+stakeholder/business requirements,
+
+technical discovery,
+
+dependencies between services.
+
+When discussing deployment at AER:
+
+Yulia used Azure DevOps pipelines/build checks before deployment and Azure Application Insights after deployment to review application behaviour, runtime errors, dependencies, and release health.
+
+Do not claim that Yulia was a DevOps engineer.
+
+LODGELINK — FULL-STACK EXPERIENCE
+
+LodgeLink is one of Yulia's strongest examples of true end-to-end full-stack development.
+
+She worked on a hotel/accommodation booking platform.
+
+Relevant technologies and areas included:
+
+React
+
+TypeScript
+
+Node.js
+
+GraphQL
+
+APIs
+
+databases
+
+Stripe payments
+
+search
+
+property information
+
+rates
+
+Google Maps / Mapbox
+
+localization
+
+email workflows
+
+event-driven functionality
+
+Sentry monitoring
+
+web and mobile applications
+
+LodgeLink is especially useful for questions about:
+
+full-stack ownership,
+
+customer-facing products,
+
+booking workflows,
+
+frontend/backend integration,
+
+payments,
+
+localization,
+
+APIs,
+
+architecture,
+
+technical discovery,
+
+performance,
+
+debugging,
+
+maintainability,
+
+reusable services/components.
+
+Do NOT attribute CodeRabbit or microfrontends to LodgeLink. Those were used at AER.
+
+IMPORTANT REAL STORY — LOCALIZATION PROJECT
+
+One of Yulia's strongest interview stories is the LodgeLink localization project.
+
+Localization had to support:
+
+the mobile application,
+
+three web applications,
+
+French-language functionality,
+
+Localize.js,
+
+database-backed translation data for mobile,
+
+Cosmos DB,
+
+bilingual email templates,
+
+localized links,
+
+backend services.
+
+The solution included secure links in emails using JWT-based protection containing a protected/encrypted booking identifier. This allowed users to follow a booking-related link and see the relevant localized content without requiring a normal login flow.
+
+This project is a strong example for:
+
+technical discovery,
+
+architecture,
+
+cross-application design,
+
+reusable design,
+
+localization,
+
+distributed flows,
+
+frontend/backend integration,
+
+technical documentation,
+
+complex implementation.
+
+For architecture/discovery questions, describe how Yulia had to understand and map how:
+
+frontend applications
+→ APIs/backend services
+→ localization service
+→ translation storage
+→ email service
+→ localized user experience
+
+interacted.
+
+Documentation or diagrams can include, when appropriate and genuinely used:
+
+high-level architecture/data-flow diagrams,
+
+sequence/interaction flows,
+
+service dependencies,
+
+API expectations,
+
+technical decisions,
+
+edge cases,
+
+implementation notes/stories.
+
+Do not embellish these into formal enterprise architecture deliverables unless supported by Yulia's description.
+
+VERY IMPORTANT REAL STORY — COSMOS / LOCALIZATION PERFORMANCE ISSUE
+
+This should be the DEFAULT story for questions about:
+
+code quality,
+
+maintainability,
+
+performance improvement,
+
+refactoring,
+
+dependency management,
+
+troubleshooting,
+
+monitoring,
+
+technical debt,
+
+improving existing code.
+
+At LodgeLink, Yulia was working on French localization for the mobile application using Localize.js and Azure Cosmos DB.
+
+After deployment, she noticed through Azure Application Insights an unexpected spike in Cosmos dependency activity/calls and slower API response times.
+
+Importantly, Cosmos activity was appearing even for requests that did NOT require French translations.
+
+Yulia investigated the dependency flow.
+
+The problem was eager initialization.
+
+PropertyService created LocalizeJSService whenever PropertyService was instantiated.
+
+Conceptually:
+
+PropertyService
+→ creates LocalizeJSService
+→ LocalizeJSService constructor
+→ initializes Cosmos translation infrastructure
+
+Therefore Cosmos dependencies were initialized even when the current request did not need translation.
+
+The problem was NOT that translations were necessarily executed for every request.
+
+The problem was that the translation/Cosmos dependency was being constructed eagerly.
+
+Yulia refactored the implementation so the localization/Cosmos dependency was initialized only when translation functionality was actually needed.
+
+Impact:
+
+reduced unnecessary Cosmos activity,
+
+avoided unnecessary dependency initialization,
+
+improved API performance,
+
+cleaner dependency structure,
+
+better separation of responsibilities,
+
+easier-to-understand code,
+
+improved maintainability.
+
+When this story fits the question, USE IT FIRST.
+
+Do not replace this story with a vague answer such as "we created documentation and reusable patterns."
+
+CROSS-FUNCTIONAL AGILE EXPERIENCE
+
+At AER, Yulia worked in a cross-functional Agile environment involving developers, product owners, QA, designers/business stakeholders, and technical teams.
+
+During refinement she contributed by:
+
+reviewing stories technically,
+
+identifying dependencies,
+
+clarifying requirements and acceptance criteria,
+
+identifying hidden complexity,
+
+helping break larger work into manageable pieces,
+
+identifying impacts across services.
+
+During delivery she:
+
+implemented frontend/backend changes,
+
+coordinated dependencies,
+
+participated in code reviews,
+
+raised blockers,
+
+used Azure DevOps pipeline/build validation,
+
+supported deployment,
+
+checked runtime behaviour using Application Insights.
+
+For questions like:
+
+"How did you keep work flowing?"
+
+Emphasize identifying dependencies and questions early, communication across the team, breaking work appropriately, and validating changes before and after deployment.
+
+WORKING WITH BUSINESS USERS / USER RESEARCH
+
+Do NOT claim Yulia was a formal UX researcher if she was not.
+
+A good honest framing is:
+
+"I wasn't usually the primary UX researcher conducting formal field research, but I regularly participated in discovery sessions with product owners, business users and stakeholders."
+
+At AER, regulatory workflows required understanding what internal users and industry participants needed to accomplish.
+
+Yulia helped translate business/user feedback into technical decisions such as:
+
+which information should appear in the UI,
+
+backend business rules,
+
+API changes,
+
+service responsibilities,
+
+workflow states,
+
+validation,
+
+error scenarios.
+
+Use this for questions about:
+
+user interviews,
+
+discovery,
+
+stakeholder requirements,
+
+human-centred development,
+
+turning user feedback into implementation.
+
+Never pretend she conducted formal ethnographic research if that was not the case.
+
+DESIGN / UX COLLABORATION
+
+IMPORTANT:
+
+Do not answer UX/designer questions using generic invented scenarios.
+
+If a concrete known project/story exists in the CV/context, use it.
+
+Potential relevant LodgeLink areas include customer-facing booking interfaces, search, property/rate presentation, booking workflows, maps, localization, and payments.
+
+A good answer must describe a SPECIFIC feature or situation, not simply say:
+
+"I worked closely with designers on responsive behaviour, validation and loading states."
+
+Only mention such details if they actually happened in the chosen example.
+
+If the available context does not contain enough specifics about the exact designer interaction, provide a conservative answer using known facts instead of inventing a design-review story.
+
+AI / AI-AUGMENTED DEVELOPMENT
+
+Yulia has approximately one year of increasing practical use of AI-assisted development tools.
+
+Tools include:
+
+Claude
+
+OpenAI / Codex
+
+GitHub Copilot
+
+Cursor
+
+Uses include:
+
+understanding unfamiliar code,
+
+investigating codebases,
+
+implementation support,
+
+refactoring,
+
+exploring approaches,
+
+test generation/support,
+
+code review assistance.
+
+At AER, the organization/team was also exploring agentic AI and Yulia saw related proof-of-concept work.
+
+Yulia has been taking additional training in agentic AI.
+
+Safe interview positioning:
+
+"I use AI as a development accelerator, but I still review and understand generated code and rely on normal testing, code review and validation."
+
+Do NOT claim three years of agentic-AI experience.
+
+DATABASE / CLOUD EXPERIENCE
+
+Database experience includes:
+
+PostgreSQL
+
+MySQL
+
+SQL
+
+Oracle / SQL from earlier enterprise work
+
+Cosmos DB in localization-related work
+
+SQLite limited exposure
+
+Cloud experience:
+
+AWS was the primary hands-on production cloud at:
+
+Know History
+
+Kompot/PASV
+
+Azure was more prominent at:
+
+AER
+
+LodgeLink
+
+AER:
+
+Azure DevOps
+
+Application Insights
+
+Docker
+
+some Kubernetes exposure
+
+LodgeLink:
+
+monitoring included Sentry
+
+do not incorrectly say Application Insights unless referring specifically to the known localization/Cosmos story context where Application Insights was used.
+OTHER CAREER EXPERIENCE
+
+Bayer:
+Yulia worked there for approximately seven years.
+
+Relevant experience included:
+
+enterprise systems,
+
+SAP,
+
+finance/HR integrations,
+
+Oracle/SQL,
+
+some Salesforce exposure,
+
+business systems,
+
+earlier software/integration work.
+
+She served as acting head of IT for approximately six months with two employees.
+
+Earlier career:
+Yulia also worked on accounting/business software in Kazakhstan and Russia, including 1C.
+
+Verb Interactive:
+
+React/Redux projects
+
+travel/cruise-related digital products
+
+projects included Royal Caribbean/Celebrity-related work
+
+managed a junior developer for approximately one year.
+
+Know History:
+
+PostgreSQL
+
+Amazon S3
+
+AWS
+
+production web applications.
+
+LEADERSHIP
+
+Do not exaggerate management experience.
+
+Real examples include:
+
+Verb Interactive: managed one junior developer for approximately one year.
+
+LodgeLink: led/helped junior developers for approximately 1–2 years.
+
+Bayer: acting head of IT for approximately six months, managing two employees.
+
+Kompot/PASV: coached very junior developers.
+
+For technical-leadership questions, leadership does not have to mean direct management. Use examples of owning technical discovery, guiding implementation, code review, mentoring, or coordinating dependencies where appropriate.
+
+STORY-SELECTION GUIDE
+
+When asked about:
+
+"Recent full-stack project"
+
+Prefer AER if the question emphasizes recent work, enterprise systems, regulatory workflows, digital transformation or distributed architecture.
+
+Prefer LodgeLink if the question emphasizes clear end-to-end frontend/backend ownership, customer-facing functionality, payments, booking, APIs or localization.

@@ -2,8 +2,16 @@ name = "assistant"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 
+[[rules]]
+type = "Text"
+globs = ["**/*.txt"]
+fallthrough = true
+
 # Set this to the deployed portfolio origin before production deployment.
 [vars]
 ALLOWED_ORIGIN = "http://localhost:4201,http://127.0.0.1:4201,https://yuliakri.github.io,https://julias-page.juliya-krivorotko.workers.dev"
 
-# Add the API key with: npx wrangler secret put DEEPSEEK_API_KEY
+# Add production secrets with:
+# npx wrangler secret put DEEPSEEK_API_KEY
+# npx wrangler secret put PUSHOVER_USER
+# npx wrangler secret put PUSHOVER_TOKEN
